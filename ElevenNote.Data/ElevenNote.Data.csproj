@@ -66,14 +66,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202103241343298_TryingToUpdate.cs" />
-    <Compile Include="Migrations\202103241343298_TryingToUpdate.Designer.cs">
-      <DependentUpon>202103241343298_TryingToUpdate.cs</DependentUpon>
+    <Compile Include="Migrations\202103241958152_First.cs" />
+    <Compile Include="Migrations\202103241958152_First.Designer.cs">
+      <DependentUpon>202103241958152_First.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202103241717276_Starred.cs" />
-    <Compile Include="Migrations\202103241717276_Starred.Designer.cs">
-      <DependentUpon>202103241717276_Starred.cs</DependentUpon>
+    <Compile Include="Migrations\202103242021118_Fourth.cs" />
+    <Compile Include="Migrations\202103242021118_Fourth.Designer.cs">
+      <DependentUpon>202103242021118_Fourth.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
@@ -84,11 +85,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202103241343298_TryingToUpdate.resx">
-      <DependentUpon>202103241343298_TryingToUpdate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202103241958152_First.resx">
+      <DependentUpon>202103241958152_First.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202103241717276_Starred.resx">
-      <DependentUpon>202103241717276_Starred.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202103242021118_Fourth.resx">
+      <DependentUpon>202103242021118_Fourth.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

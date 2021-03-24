@@ -7,13 +7,13 @@ namespace ElevenNote.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
-    public sealed partial class TryingToUpdate : IMigrationMetadata
+    public sealed partial class Fourth : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(TryingToUpdate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Fourth));
         
         string IMigrationMetadata.Id
         {
-            get { return "202103241343298_TryingToUpdate"; }
+            get { return "202103242021118_Fourth"; }
         }
         
         string IMigrationMetadata.Source
