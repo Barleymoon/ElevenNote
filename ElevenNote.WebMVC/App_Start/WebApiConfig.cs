@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Http;
 
 namespace ElevenNote.WebMVC.App_Start
+//namespace ElevenNote.WebMVC
 {
     public class WebApiConfig
     {
