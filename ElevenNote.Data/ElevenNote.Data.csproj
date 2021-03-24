@@ -59,6 +59,10 @@
     <Compile Include="Migrations\202103241343298_TryingToUpdate.Designer.cs">
       <DependentUpon>202103241343298_TryingToUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202103241717276_Starred.cs" />
+    <Compile Include="Migrations\202103241717276_Starred.Designer.cs">
+      <DependentUpon>202103241717276_Starred.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -70,6 +74,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202103241343298_TryingToUpdate.resx">
       <DependentUpon>202103241343298_TryingToUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202103241717276_Starred.resx">
+      <DependentUpon>202103241717276_Starred.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
