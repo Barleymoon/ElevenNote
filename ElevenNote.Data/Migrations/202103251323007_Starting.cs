@@ -3,7 +3,7 @@ namespace ElevenNote.Data.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class First : DbMigration
+    public partial class Starting : DbMigration
     {
         public override void Up()
         {
@@ -12,9 +12,13 @@ namespace ElevenNote.Data.Migrations
                 c => new
                     {
                         CategoryId = c.Int(nullable: false, identity: true),
+                        OwnerId = c.Guid(nullable: false),
                         Name = c.String(),
+                        Category_CategoryId = c.Int(),
                     })
-                .PrimaryKey(t => t.CategoryId);
+                .PrimaryKey(t => t.CategoryId)
+                .ForeignKey("dbo.Category", t => t.Category_CategoryId)
+                .Index(t => t.Category_CategoryId);
             
             CreateTable(
                 "dbo.Note",
@@ -112,11 +116,13 @@ namespace ElevenNote.Data.Migrations
             DropForeignKey("dbo.IdentityUserClaim", "ApplicationUser_Id", "dbo.ApplicationUser");
             DropForeignKey("dbo.IdentityUserRole", "IdentityRole_Id", "dbo.IdentityRole");
             DropForeignKey("dbo.Note", "CategoryId", "dbo.Category");
+            DropForeignKey("dbo.Category", "Category_CategoryId", "dbo.Category");
             DropIndex("dbo.IdentityUserLogin", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserClaim", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "ApplicationUser_Id" });
             DropIndex("dbo.IdentityUserRole", new[] { "IdentityRole_Id" });
             DropIndex("dbo.Note", new[] { "CategoryId" });
+            DropIndex("dbo.Category", new[] { "Category_CategoryId" });
             DropTable("dbo.IdentityUserLogin");
             DropTable("dbo.IdentityUserClaim");
             DropTable("dbo.ApplicationUser");

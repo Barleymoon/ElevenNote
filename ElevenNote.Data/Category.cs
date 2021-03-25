@@ -14,5 +14,6 @@ namespace ElevenNote.Data
         [Required]
         public Guid OwnerId { get; set; }
         public string Name { get; set; }
+        public virtual List<Category> Categories { get; set; }
     }
 }
